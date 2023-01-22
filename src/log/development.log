@@ -88,3 +88,125 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 172.21.0.1 at 2023-01-22 06:36:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (15.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/home
+  Rendered home/index.html.erb within layouts/home (6.6ms)
+  Rendered layouts/_header.html.erb (8.1ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4119ms (Views: 4107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2023-01-22 06:36:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/home
+  Rendered home/index.html.erb within layouts/home (3.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flash.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 238ms (Views: 227.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 172.21.0.1 at 2023-01-22 06:36:59 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (41.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 255ms (Views: 74.3ms | ActiveRecord: 69.6ms)
+
+
+Started POST "/users" for 172.21.0.1 at 2023-01-22 06:37:13 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJxqlZe3Pkvjb+1WM3j7R0i8m2FOSyqXnMKkot5W46MACSH90Ndl7YP25sCNmUKdU5rTvdWDpvQq6Xp3ejv8Yw==", "user"=>{"email"=>"ibn5100t@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (7.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ibn5100t@gmail.com' LIMIT 1[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (10.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 314ms (Views: 76.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users/sign_in" for 172.21.0.1 at 2023-01-22 06:37:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (10.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 172.21.0.1 at 2023-01-22 06:37:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (3.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.21.0.1 at 2023-01-22 06:37:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CY6dSSHeuusRjY/VvYRMdtCM5zRlqcGAdrexcvnjXxm5G9YhZr7hTXEUhEMDZfWsy6qv6P5hTePAnG+nXY5A2Q==", "user"=>{"email"=>"ibn5100t@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ibn5100t@gmail.com' LIMIT 1[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (6.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 286ms (Views: 67.8ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users" for 172.21.0.1 at 2023-01-22 06:38:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r7PthpIW0o2ysUMhv9uvTekflB3P5dfb5kedvOe4tcpL6HTDvv8yMPe2q3SB6v+grxaeJ0g9NhEIJ8hrFTQOsA==", "user"=>{"email"=>"ibn5100t@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ibn5100t@gmail.com' LIMIT 1[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (3.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 242ms (Views: 31.8ms | ActiveRecord: 1.1ms)
+
+
