@@ -346,3 +346,11 @@ ActionController::RoutingError (undefined method `abstract_class=' for Applicati
 app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
 app/controllers/application_controller.rb:1:in `<main>'
 app/controllers/home_controller.rb:1:in `<main>'
+Started GET "/" for 172.18.0.1 at 2023-01-23 13:55:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (undefined method `abstract_class=' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/home_controller.rb:1:in `<main>'
