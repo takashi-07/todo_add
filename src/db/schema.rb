@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_23_123703) do
+ActiveRecord::Schema.define(version: 2023_01_23_142211) do
 
   create_table "goals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,23 @@ ActiveRecord::Schema.define(version: 2023_01_23_123703) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_goals_on_user_id"
+  end
+
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tags_on_user_id"
+  end
+
+  create_table "todo_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "todo_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tag_id"], name: "index_todo_tags_on_tag_id"
+    t.index ["todo_id"], name: "index_todo_tags_on_todo_id"
   end
 
   create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -43,5 +60,8 @@ ActiveRecord::Schema.define(version: 2023_01_23_123703) do
   end
 
   add_foreign_key "goals", "users"
+  add_foreign_key "tags", "users"
+  add_foreign_key "todo_tags", "tags"
+  add_foreign_key "todo_tags", "todos"
   add_foreign_key "todos", "goals"
 end
